@@ -2,9 +2,9 @@
   "name": "normative-react",
   "version": "0.0.1",
   "description": "A React starter theme for Normative.",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "start": "npm start",
+    "start": "node server.js",
     "test": "npm test"
   },
   "keywords": [
@@ -20,8 +20,11 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "eslint": "^1.10.3",
+    "express": "^4.13.3",
     "sass-loader": "^3.1.2",
-    "webpack": "^1.12.11"
+    "webpack": "^1.12.11",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
     "react": "^0.14.6",

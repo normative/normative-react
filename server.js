@@ -1,7 +1,7 @@
-const path = require('path');
-const express = require('express');
-const webpack = require('webpack');
-const config = require('./webpack.config.js');
+import path from 'path';
+import express from 'express';
+import webpack from 'webpack';
+import config from './webpack.config.js';
 
 const app = express();
 const compiler = webpack(config);

@@ -2,11 +2,16 @@
   "name": "normative-react",
   "version": "0.0.1",
   "description": "A React starter theme for Normative.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/normative/normative-react.git"
+  },
   "main": "webpack.config.js",
   "scripts": {
     "lint": "eslint src",
     "start": "node server.js",
-    "test": "npm test"
+    "test": "mocha --compilers js:babel-register tests/unit/**.js",
+    "lint": "eslint **.js"
   },
   "keywords": [
     "react",
@@ -22,7 +27,13 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.0.1",
     "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "eslint-plugin-classes": "^0.1.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-react": "^3.11.3",
     "express": "^4.13.3",
+    "mocha": "^2.3.4",
+    "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
     "webpack": "^1.12.11",
     "webpack-dev-middleware": "^1.4.0",

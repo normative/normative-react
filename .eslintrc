@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "classes",
+    "filenames"
+  ],
+  "rules": {
+    "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "classes/name": [2, "class", "method"],
+    "comma-dangle": 0,
+    "consistent-this": [2, "self"],
+    "filenames/filenames": [2, "^[a-z][a-zA-Z0-9]*$", "match-exported-or-regex"],
+    "no-unused-vars": [2, {"vars": "all", "args": "none"}],
+    "operator-linebreak": [2, "after"],
+    "padded-blocks": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-indent-props": 0
+  }
+}

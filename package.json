@@ -8,10 +8,9 @@
   },
   "main": "webpack.config.js",
   "scripts": {
-    "lint": "eslint src",
     "start": "node server.js",
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
-    "lint": "eslint **.js"
+    "lint": "eslint . --ext .js,.jsx"
   },
   "keywords": [
     "react",

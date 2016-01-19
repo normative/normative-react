@@ -13,15 +13,15 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('*', function(request, response) {
+app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(3000, 'localhost', function(error) {
+app.listen(3000, 'localhost', (error) => {
   if (error) {
-    console.log(error);
+    console.error(error); //eslint-disable-line
     return;
   }
 
-  console.log('Listening at http://localhost:3000');
+  console.log('Listening at http://localhost:3000'); //eslint-disable-line
 });

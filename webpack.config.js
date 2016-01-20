@@ -14,15 +14,20 @@ module.exports = {
   },
   assets: {
     noInfo: true,
-    publicPath: '/static'
+    publicPath: '/static/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
+  resolve: {
+    modulesDirectories: ['node_modules'],
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [{
       test: /\.jsx?/,
+      exclude: /(node_modules|bower_components)/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }]

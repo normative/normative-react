@@ -12,6 +12,10 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     publicPath: '/static/'
   },
+  assets: {
+    noInfo: true,
+    publicPath: '/static'
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

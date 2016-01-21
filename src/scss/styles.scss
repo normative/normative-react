@@ -1,0 +1,10 @@
+$background-color: blue;
+
+body {
+  background-color: $background-color;
+}
+
+h1 {
+  display: inline-block;
+  transform: rotateZ(-20deg);
+}

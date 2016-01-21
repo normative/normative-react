@@ -1,7 +1,9 @@
-$background-color: blue;
+$background-color: #a00;
+$color: #f9f9f9;
 
 body {
   background-color: $background-color;
+  color: $color;
 }
 
 h1 {

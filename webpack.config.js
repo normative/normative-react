@@ -1,6 +1,8 @@
 import path from 'path';
 import webpack from 'webpack';
 import autoprefixer from 'autoprefixer';
+import stylelint from 'stylelint';
+import reporter from 'postcss-reporter';
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -34,12 +36,12 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'postcss', 'sass'],
+        loaders: ['style', 'css', 'sass?outputStyle=expanded', 'postcss'],
         include: path.join(__dirname, 'src')
       }
     ]
   },
   postcss: () => {
-    return [autoprefixer];
+    return [stylelint, reporter({ clearMessages: true }), autoprefixer];
   }
 };

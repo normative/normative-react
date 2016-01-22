@@ -1,5 +1,6 @@
 import { describe, it } from 'mocha';
-import assert from 'assert';
+import assert from 'assert';  // eslint-disable-line
+
 const browser = global.browser;
 
 describe('my feature', () => {
@@ -7,7 +8,7 @@ describe('my feature', () => {
     return browser
       .url('http://google.com')
       .getTitle().then((title) => {
-        console.log(title);
+        console.log(title);  // eslint-disable-line
       });
   });
 });

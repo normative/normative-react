@@ -1,11 +1,13 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
+import App from './app/App.jsx';
 import ErrorContainer from './containers/ErrorContainer';
 import HomeContainer from './containers/HomeContainer';
 
+
 const routes = (
-  <Route path="/">
+  <Route component={App} path="/">
     <IndexRoute component={HomeContainer} />
     <Route path="*" component={ErrorContainer} />
   </Route>

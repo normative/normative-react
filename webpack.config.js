@@ -5,7 +5,7 @@ import stylelint from 'stylelint';
 import reporter from 'postcss-reporter';
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './src/client/index'
@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass?outputStyle=expanded', 'postcss'],
+        loaders: ['style', 'css?sourceMap', 'sass?outputStyle=expanded', 'postcss'],
         include: path.join(__dirname, 'src')
       }
     ]

@@ -3,7 +3,7 @@ const spawn = childProcess.spawn;
 
 const server = spawn('npm', ['start'], { stdio: 'inherit' });
 const selenium = spawn('selenium-standalone', ['start'], { stdio: 'inherit' });
-const ftest = spawn('wdio', ['tests/functional/wdio.conf.js'], { stdio: 'inherit' });
+const ftest = spawn('wdio', ['tests/functional/wdio.config.js'], { stdio: 'inherit' });
 
 ftest.on('close', (code) => {
   server.kill();

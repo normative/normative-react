@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import autoprefixer from 'autoprefixer';
+import doiuse from 'doiuse';
 import stylelint from 'stylelint';
 import reporter from 'postcss-reporter';
 
@@ -42,6 +43,14 @@ module.exports = {
     ]
   },
   postcss: () => {
-    return [stylelint, reporter({ clearMessages: true }), autoprefixer];
+    return [
+      doiuse({
+        browsers: ['ie >= 10', '> 1%'],
+        onFeatureUsage: usage => console.log(usage.message) // eslint-disable-line
+      }),
+      stylelint,
+      reporter({ clearMessages: true }),
+      autoprefixer
+    ];
   }
 };

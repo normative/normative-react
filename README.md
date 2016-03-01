@@ -10,16 +10,24 @@ The following commands are available:
 # install node packages
 npm install
 
-# start the development server
+# run the development server
+npm run dev
+
+# compile the production build
+npm run build
+
+# start the production server
 npm start
 npm run start
 
 # run the linter for .js and .jsx
 npm run lint
 
+# run mocha tests
 npm run test
-npm run ftest
-npm run sinit
+
+# run the functional test suite
+npm run sinit && npm run ftest
 ```
 
 # Documentation
@@ -35,12 +43,12 @@ npm run sinit
 http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
 ```
-# single name variables
+# single name blocks
 .block
 .block__element
 .block--modifier
 
-# multiple name variables
+# multiple name blocks
 .block-grid
 .block-grid__element
 .block-grid--modifier

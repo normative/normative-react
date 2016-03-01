@@ -8,7 +8,7 @@ webpack(webpackConfig, (fatalError, stats) => {
   const buildError = fatalError || jsonStats.errors[0] || jsonStats.warnings[0];
 
   if (buildError) {
-    console.error(buildError);
+    console.error(buildError); // eslint-disable-line
   }
 
   fs.ensureDirSync('./tmp');

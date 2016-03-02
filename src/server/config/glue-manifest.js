@@ -6,8 +6,7 @@ const plugins = [{
   plugin: 'inert'
 }, {
   plugin: './routes/catch-all'
-},
-{
+}, {
   plugin: './routes/static'
 }];
 

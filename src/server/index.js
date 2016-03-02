@@ -8,7 +8,7 @@ import webpackPlugin from 'hapi-webpack-plugin';
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 const server = new Server();
-const webpackConfig = makeWebpackConfig(true);
+const webpackConfig = makeWebpackConfig(isDevelopment);
 webpackConfig.compiler = new Webpack(webpackConfig);
 
 const hapiPlugins = [inert];

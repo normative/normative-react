@@ -1,3 +1,5 @@
+'use strict';
+
 import Webpack from 'webpack';
 import makeWebpackConfig from '../../../webpack/makeWebpackConfig';
 

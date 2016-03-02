@@ -59,6 +59,8 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "glue": "3.2.0",
+    "hoek": "3.0.4",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-router": "^2.0.0-rc5"

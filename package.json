@@ -8,8 +8,8 @@
   },
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "babel-node ./src/server/index.js",
-    "start": "NODE_ENV=production babel-node ./src/server/index.js",
+    "dev": "NODE_ENV=development babel-node ./src/server",
+    "start": "NODE_ENV=production babel-node ./src/server",
     "build": "NODE_ENV=production babel-node ./webpack/build.js",
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
     "ftest": "babel-node ./runFunctionalTests.js",

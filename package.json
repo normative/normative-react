@@ -62,6 +62,7 @@
   "dependencies": {
     "glue": "3.2.0",
     "hoek": "3.0.4",
+    "foundation-sites": "^6.2.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-router": "^2.0.0-rc5"

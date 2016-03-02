@@ -8,9 +8,10 @@
   },
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "babel-node ./src/server/index.js",
-    "start": "NODE_ENV=production babel-node ./src/server/index.js",
+    "dev": "NODE_ENV=development babel-node ./src/server",
+    "start": "babel-node ./src/server",
     "build": "NODE_ENV=production babel-node ./webpack/build.js",
+    "heroku": "npm run build && npm start",
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
     "ftest": "babel-node ./runFunctionalTests.js",
     "sinit": "selenium-standalone install",
@@ -59,6 +60,8 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "glue": "3.2.0",
+    "hoek": "3.0.4",
     "foundation-sites": "^6.2.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",

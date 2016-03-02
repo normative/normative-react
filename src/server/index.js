@@ -1,53 +1,15 @@
-import { Server } from 'hapi';
-import inert from 'inert';
-import path from 'path';
-import Webpack from 'webpack';
-import makeWebpackConfig from '../../webpack/makeWebpackConfig';
-import webpackPlugin from 'hapi-webpack-plugin';
+'use strict';
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
+import Glue from 'glue';
+import Hoek from 'hoek';
+import Manifest from './config/glue-manifest';
 
-const server = new Server();
-const webpackConfig = makeWebpackConfig(isDevelopment);
-webpackConfig.compiler = new Webpack(webpackConfig);
+Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
 
-const hapiPlugins = [inert];
+  Hoek.assert(!err, err);
 
-if (isDevelopment) {
-  hapiPlugins.push({
-    register: webpackPlugin,
-    options: webpackConfig
-  });
-}
-
-server.connection({ port: 3000 });
-server.register(hapiPlugins, error => {
-
-  if (error) {
-    return console.log(error); // eslint-disable-line
-  }
-
-  server.route({
-    method: 'GET',
-    path: '/{path*}',
-    handler: (request, reply) => {
-      reply.file(path.join(__dirname, '../client/index.html'));
-    }
-  });
-
-  if (!isDevelopment) {
-    server.route({
-      method: 'GET',
-      path: '/static/{path*}',
-      handler: {
-        directory: {
-          path: path.join(__dirname, '../../dist')
-        }
-      }
-    });
-  }
-
-  server.start(() => {
-    console.log('Listening at http://localhost:3000'); // eslint-disable-line
+  server.start((err) => {
+    Hoek.assert(!err, err);
+    console.log(`Server started: ${server.info.uri}`);
   });
 });

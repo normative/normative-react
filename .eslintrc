@@ -5,6 +5,7 @@
     "filenames"
   ],
   "rules": {
+    "arrow-body-style": 0,
     "brace-style": [2, "1tbs", { "allowSingleLine": false }],
     "classes/name": [2, "class", "method"],
     "comma-dangle": 0,
@@ -15,6 +16,7 @@
     "padded-blocks": 0,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-indent-props": 0,
-    "react/prop-types": [2, {"ignore": ["children"]}]
+    "react/prop-types": [2, {"ignore": ["children"]}],
+    "strict": 0
   }
 }

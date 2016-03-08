@@ -1,8 +1,6 @@
-'use strict';
-
 import Path from 'path';
 
-exports.register = (server, options, next) => {
+export const register = (server, options, next) => {
 
   server.route({
     method: 'GET',
@@ -15,6 +13,6 @@ exports.register = (server, options, next) => {
   next();
 };
 
-exports.register.attributes = {
+register.attributes = {
   name: 'catch-all-routes'
 };

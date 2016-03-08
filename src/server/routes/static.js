@@ -2,14 +2,14 @@
 
 import Path from 'path';
 
-exports.register = (server, options, next) => {
+export const register = (server, options, next) => {
 
   server.route({
     method: 'GET',
     path: '/static/{path*}',
     handler: {
       directory: {
-        path: Path.join(__dirname, '../../../dist')
+        path: Path.join(__dirname, '../../../dist/client')
       }
     }
   });
@@ -17,6 +17,6 @@ exports.register = (server, options, next) => {
   next();
 };
 
-exports.register.attributes = {
+register.attributes = {
   name: 'static-routes'
 };

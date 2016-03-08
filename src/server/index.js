@@ -2,14 +2,14 @@
 
 import Glue from 'glue';
 import Hoek from 'hoek';
-import Manifest from './config/glue-manifest';
+import Manifest from './config/glueManifest';
 
 Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
 
   Hoek.assert(!err, err);
 
-  server.start((err) => {
-    Hoek.assert(!err, err);
-    console.log(`Server started: ${server.info.uri}`);
+  server.start((startErr) => {
+    Hoek.assert(!startErr, startErr);
+    console.log(`Server started: ${server.info.uri}`); // eslint-disable-line
   });
 });

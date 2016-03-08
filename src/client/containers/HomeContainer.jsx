@@ -8,7 +8,9 @@ class HomeContainer extends Component {
       <div className="row">
         <div className="container">
           <h1>Home</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quas nisi praesentium accusamus non cumque similique itaque cum dolore. Voluptate nemo voluptas magnam modi. Quod repudiandae modi libero, in tempora.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quas
+            nisi praesentium accusamus non cumque similique itaque cum dolore. Voluptate
+            nemo voluptas magnam modi. Quod repudiandae modi libero, in tempora.</p>
         </div>
       </div>
     );

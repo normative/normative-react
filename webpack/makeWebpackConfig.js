@@ -1,15 +1,17 @@
-import webpack from 'webpack';
-import autoprefixer from 'autoprefixer';
-import doiuse from 'doiuse';
-import stylelint from 'stylelint';
-import reporter from 'postcss-reporter';
-import constants from './constants';
+'use strict';
+
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const doiuse = require('doiuse');
+const stylelint = require('stylelint');
+const reporter = require('postcss-reporter');
+const constants = require('./constants');
 
 const browserSupport = ['ie >= 10', '> 1%'];
 
 let devtool = '';
 
-export default function makeWebpackConfig(isDevelopment) {
+const makeWebpackConfig = (isDevelopment) => {
 
   const plugins = [new webpack.NoErrorsPlugin()];
 
@@ -87,5 +89,7 @@ export default function makeWebpackConfig(isDevelopment) {
         autoprefixer
       ];
     }
-  }
-}
+  };
+};
+
+module.exports = makeWebpackConfig;

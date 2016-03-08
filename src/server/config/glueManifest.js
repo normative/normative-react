@@ -1,11 +1,11 @@
 'use strict';
 
-import WebpackPluginConfig from './webpack-plugin-config';
+import WebpackPluginConfig from './webpackPluginConfig';
 
 const plugins = [{
   plugin: 'inert'
 }, {
-  plugin: './routes/catch-all'
+  plugin: './routes/catchAll'
 }, {
   plugin: './routes/static'
 }];

@@ -86,7 +86,9 @@ const makeWebpackConfig = (isDevelopment) => {
         }),
         stylelint,
         reporter({ clearMessages: true }),
-        autoprefixer
+        autoprefixer({
+          browsers: browserSupport
+        })
       ];
     }
   };

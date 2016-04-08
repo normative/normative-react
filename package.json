@@ -14,7 +14,7 @@
     "build": "npm run clean && npm run build-client && npm run build-server",
     "build-server": "babel -d ./dist/server ./src/server -s",
     "build-client": "NODE_ENV=production babel-node ./webpack/build.js && cp ./src/client/index.html ./dist/client/index.html",
-    "heroku": "npm run build && npm start",
+    "postinstall": "npm run build",
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
     "ftest": "babel-node ./runFunctionalTests.js",
     "sinit": "selenium-standalone install",

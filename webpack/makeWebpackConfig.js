@@ -6,6 +6,7 @@ const doiuse = require('doiuse');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
 const constants = require('./constants');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const browserSupport = ['ie >= 10', '> 1%'];
 

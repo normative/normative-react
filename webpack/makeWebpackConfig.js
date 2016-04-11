@@ -24,6 +24,7 @@ const makeWebpackConfig = (isDevelopment) => {
     devtool = 'cheap-module-source-map';
   } else {
     plugins.push(
+      new ExtractTextPlugin('app.css'),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurenceOrderPlugin(),
       new webpack.optimize.UglifyJsPlugin({
@@ -61,12 +62,13 @@ const makeWebpackConfig = (isDevelopment) => {
         },
         {
           test: /\.(css)$/,
-          loaders: ['style', 'css?sourceMap'],
+          loader: isDevelopment ? 'style!css?sourceMap' : ExtractTextPlugin.extract('css'),
           include: constants.NODE_MODULES_DIR
         },
         {
           test: /\.(scss)$/,
-          loaders: ['style', 'css?sourceMap', 'sass?outputStyle=expanded', 'postcss'],
+          loader: isDevelopment ? 'style!css?sourceMap!sass?outputStyle=expanded!postcss' : 
+          ExtractTextPlugin.extract('css!sass?outputStyle=compressed!postcss'),
           include: constants.SRC_DIR
         },
         {

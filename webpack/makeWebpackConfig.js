@@ -87,7 +87,7 @@ const makeWebpackConfig = (isDevelopment) => {
           include: constants.SRC_DIR
         },
         {
-          test: /\.(svg|jpg|png|woff)$/,
+          test: /\.(gif|svg|jpg|jpeg|png|woff|woff2|ttf|eot)$/,
           loader: 'url-loader?limit=8192',
           include: constants.SRC_DIR
         }

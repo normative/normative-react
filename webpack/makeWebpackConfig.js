@@ -26,7 +26,8 @@ const makeWebpackConfig = (isDevelopment) => {
   } else {
     plugins.push(
       new HtmlWebpackPlugin({
-        template: constants.SRC_DIR + '/client/index.html'
+        template: constants.SRC_DIR + '/client/index.html',
+        isDevelopment
       }),
       new ExtractTextPlugin('app.css', {
         allChunks: true

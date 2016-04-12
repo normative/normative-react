@@ -30,6 +30,11 @@ const makeWebpackConfig = (isDevelopment) => {
           screw_ie8: true, // eslint-disable-line camelcase
           warnings: false // Because uglify reports irrelevant warnings.
         }
+      }),
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify('production')
+        }
       })
     );
   }

@@ -6,6 +6,22 @@ export const register = (server, options, next) => {
 
   server.route({
     method: 'GET',
+    path: '/favicon.ico',
+    handler: (request, reply) => {
+      reply.file(Path.join(__dirname, '../../client/favicon.ico'));
+    }
+  });
+
+  server.route({
+    method: 'GET',
+    path: '/robots.txt',
+    handler: (request, reply) => {
+      reply.file(Path.join(__dirname, '../../client/robots.txt'));
+    }
+  });
+
+  server.route({
+    method: 'GET',
     path: '/static/{path*}',
     handler: {
       directory: {

@@ -18,8 +18,12 @@
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
     "ftest": "babel-node ./scripts/runFunctionalTests.js",
     "sinit": "selenium-standalone install",
-    "lint": "eslint ./src --ext .js,.jsx"
+    "lint": "npm run lint:js",
+    "lint:js": "eslint ./src --ext .js,.jsx"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "keywords": [
     "react",
     "normative",
@@ -37,6 +41,7 @@
     "eslint-plugin-react": "^4.3.0",
     "hapi-webpack-plugin": "^1.3.0",
     "mocha": "^2.4.5",
+    "pre-commit": "^1.1.3",
     "selenium-standalone": "^5.1.0",
     "wdio-mocha-framework": "^0.2.12",
     "webdriverio": "^4.0.5",

@@ -8,7 +8,7 @@ export const register = (server, options, next) => {
     method: 'GET',
     path: '/favicon.ico',
     handler: (request, reply) => {
-      reply.file(Path.join(__dirname, '../../client/favicon.ico'));
+      reply.file(Path.join(__dirname, '../../static/favicon.ico'));
     }
   });
 
@@ -16,7 +16,7 @@ export const register = (server, options, next) => {
     method: 'GET',
     path: '/robots.txt',
     handler: (request, reply) => {
-      reply.file(Path.join(__dirname, '../../client/robots.txt'));
+      reply.file(Path.join(__dirname, '../../static/robots.txt'));
     }
   });
 

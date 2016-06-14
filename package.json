@@ -14,7 +14,7 @@
     "build": "npm run clean && npm run build:client && npm run build:server && npm run build:static",
     "build:server": "NODE_ENV=production babel -d ./dist/server ./src/server -s",
     "build:client": "NODE_ENV=production babel-node ./webpack/build.js",
-    "build:static": "cp src/assets/static/* dist/client/",
+    "build:static": "cp -R src/static dist/",
     "postinstall": "babel-node ./scripts/postInstall.js",
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
     "ftest": "babel-node ./scripts/runFunctionalTests.js",

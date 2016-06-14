@@ -20,7 +20,7 @@
     "ftest": "babel-node ./scripts/runFunctionalTests.js",
     "sinit": "selenium-standalone install",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint ./src --ext .js,.jsx",
+    "lint:js": "eslint ./src --cache --ext .js,.jsx",
     "lint:css": "stylelint --syntax scss ./src/client/**/*.scss"
   },
   "pre-commit": [

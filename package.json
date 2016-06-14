@@ -18,8 +18,9 @@
     "test": "mocha --compilers js:babel-register tests/unit/**.js",
     "ftest": "babel-node ./scripts/runFunctionalTests.js",
     "sinit": "selenium-standalone install",
-    "lint": "npm run lint:js",
-    "lint:js": "eslint ./src --ext .js,.jsx"
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint ./src --ext .js,.jsx",
+    "lint:css": "stylelint --syntax scss ./src/client/**/*.scss"
   },
   "pre-commit": [
     "lint"
@@ -74,8 +75,8 @@
     "react-router": "^2.1.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
-    "stylelint": "^5.4.0",
-    "stylelint-config-standard": "^5.0.0",
+    "stylelint": "^6.6.0",
+    "stylelint-config-standard": "^9.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.15"
   }

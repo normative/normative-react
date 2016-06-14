@@ -14,6 +14,7 @@
     "no-unused-vars": [2, {"vars": "all", "args": "none"}],
     "operator-linebreak": [2, "after"],
     "padded-blocks": 0,
+    "prefer-template": 0,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-indent-props": 0,
     "react/prop-types": [2, {"ignore": ["children"]}],

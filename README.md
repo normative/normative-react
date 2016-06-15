@@ -18,9 +18,8 @@ npm run build
 
 # start the production server
 npm start
-npm run start
 
-# run the linter for .js and .jsx
+# run the linter for .js, .jsx and .scss
 npm run lint
 
 # run mocha tests

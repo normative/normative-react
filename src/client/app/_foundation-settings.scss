@@ -39,6 +39,8 @@
 //  34. Tooltip
 //  35. Top Bar
 
+@import 'util/util';
+
 // 1. Global
 // ---------
 
@@ -55,8 +57,8 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: darken(#3c3c3e, 5%);
-$body-font-color: $white;
+$body-background: #4baac0;
+$body-font-color: #5c5c5c;
 $body-font-family: "Colfax", Helvetica, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;

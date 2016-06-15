@@ -94,7 +94,7 @@ const makeWebpackConfig = (isDevelopment) => {
       ]
     },
     sassLoader: {
-      includePaths: [constants.NODE_MODULES_DIR]
+      includePaths: [constants.NODE_MODULES_DIR, constants.NODE_MODULES_DIR + '/foundation-sites/scss']
     },
     postcss: () => {
       return [

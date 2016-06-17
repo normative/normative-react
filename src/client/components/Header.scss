@@ -1,5 +1,7 @@
+@import "../app/global";
+
 .header {
-  background-color: #000;
+  background-color: $black;
   padding-bottom: 20px;
   padding-top: 20px;
 }

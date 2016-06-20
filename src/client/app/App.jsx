@@ -3,7 +3,7 @@ import './App.scss';
 
 import Header from '../components/Header';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div className="app">
@@ -12,5 +12,6 @@ export default class App extends Component {
       </div>
     );
   }
-
 }
+
+export default App;

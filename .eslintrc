@@ -18,7 +18,7 @@
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-indent-props": 0,
     "react/prop-types": [2, {"ignore": ["children"]}],
-    "react/prefer-stateless-function": 1,
+    "react/prefer-stateless-function": 0,
     "strict": 0
   }
 }

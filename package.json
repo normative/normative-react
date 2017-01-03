@@ -62,7 +62,7 @@
     "doiuse": "^2.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "foundation-sites": "^6.2.2",
+    "foundation-sites": "^6.3.0",
     "fs-extra": "^0.26.7",
     "glue": "3.2.0",
     "hapi": "^13.3.0",

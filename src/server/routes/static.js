@@ -36,3 +36,5 @@ export const register = (server, options, next) => {
 register.attributes = {
   name: 'static-routes'
 };
+
+export default register;

@@ -16,3 +16,5 @@ export const register = (server, options, next) => {
 register.attributes = {
   name: 'catch-all-routes'
 };
+
+export default register;

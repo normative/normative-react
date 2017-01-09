@@ -8,25 +8,25 @@ The following commands are available:
 
 ```
 # install node packages
-npm install
+yarn
 
 # run the development server
-npm run dev
+yarn dev
 
 # compile the production build
-npm run build
+yarn build
 
 # start the production server
-npm start
+yarn start
 
 # run the linter for .js, .jsx and .scss
-npm run lint
+yarn lint
 
 # run mocha tests
-npm run test
+yarn test
 
 # run the functional test suite
-npm run sinit && npm run ftest
+yarn sinit && yarn ftest
 ```
 
 # Documentation

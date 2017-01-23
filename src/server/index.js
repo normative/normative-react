@@ -10,6 +10,6 @@ Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
 
   server.start((startErr) => {
     Hoek.assert(!startErr, startErr);
-    console.log(`Server started: ${server.info.uri}`); // eslint-disable-line
+    console.log(`Server started: http://${server.info.address}:${server.info.port}`); // eslint-disable-line
   });
 });

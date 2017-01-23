@@ -2,7 +2,6 @@
 
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const doiuse = require('doiuse');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
 const constants = require('./constants');
@@ -98,10 +97,6 @@ const makeWebpackConfig = (isDevelopment) => {
     },
     postcss: () => {
       return [
-        doiuse({
-          browsers: browserSupport,
-          onFeatureUsage: usage => console.log(usage.message) // eslint-disable-line
-        }),
         stylelint,
         reporter({ clearMessages: true }),
         autoprefixer({

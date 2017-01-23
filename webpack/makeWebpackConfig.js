@@ -56,11 +56,11 @@ const makeWebpackConfig = (isDevelopment) => {
     output: {
       filename: 'app.js',
       path: constants.DIST_DIR,
-      publicPath: isDevelopment ? 'http://localhost:3000/static/' : '/static/'
+      publicPath: isDevelopment ? 'http://0.0.0.0:3000/static/' : '/static/'
     },
     assets: {
       noInfo: true,
-      publicPath: isDevelopment ? 'http://localhost:3000/static/' : '/static/'
+      publicPath: isDevelopment ? 'http://0.0.0.0:3000/static/' : '/static/'
     },
     plugins,
     resolve: {

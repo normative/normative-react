@@ -43,9 +43,9 @@ yarn sinit && yarn ftest
 
 * Due to use of both webpack (no cascading variables/functions) and foundation (separation of utilities and css output), there's a few tricky parts to the sass structure.
 
-* `src/client/app/_global.scss` is a file containing only utilities and variables, **it should never output css**. `_global.scss` can be included in any component scss file to give access to foundation utilities/variables and other custom variables. Additional custom variables should be added here (ex: color map).
+* `src/client/app/_config.scss` is a file containing only utilities and variables, **it should never output css**. `_config.scss` can be included in any component scss file to give access to foundation utilities/variables and other custom variables. Additional custom variables should be added here (ex: color map).
 
-* `src/client/app/App.scss` is the global css. It first loads `_global.scss` and then loads `_foundation-components.scss` which outputs the css of desired foundation components (add/remove foundation components here). App.scss should only be called once (inside App.jsx). Additional global css should be added here (ex: setting body background color).
+* `src/client/app/App.scss` is the global css. It first loads `_config.scss` and then loads `_foundation-components.scss` which outputs the css of desired foundation components (add/remove foundation components here). App.scss should only be called once (inside App.jsx). Additional global css should be added here (ex: setting body background color).
 
 ### Class Naming
 http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/

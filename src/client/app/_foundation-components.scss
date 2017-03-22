@@ -1,6 +1,8 @@
+// Load only the foundation components you want by uncommenting
 $global-flexbox: true;
 
 @include foundation-global-styles;
+// Use either grid or flex grid, not both
 // @include foundation-grid;
 @include foundation-flex-grid;
 @include foundation-typography;

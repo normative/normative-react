@@ -73,7 +73,7 @@
     "postcss-reporter": "^3.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "^3.0.0",
+    "react-router-dom": "^4.0.0",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "stylelint": "^7.7.1",

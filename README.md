@@ -22,11 +22,11 @@ yarn start
 # run the linter for .js, .jsx and .scss
 yarn lint
 
-# run mocha tests
+# run jest tests
 yarn test
 
-# run the functional test suite
-yarn sinit && yarn ftest
+# watch jest tests
+yarn test:watch
 ```
 
 # Documentation

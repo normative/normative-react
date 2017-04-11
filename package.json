@@ -92,6 +92,7 @@
     "hoek": "^4.1.0",
     "html-webpack-plugin": "^2.20.0",
     "inert": "^4.1.0",
+    "ip": "^1.1.5",
     "node-sass": "^4.2.0",
     "postcss-loader": "^1.2.1",
     "postcss-reporter": "^3.0.0",

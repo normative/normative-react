@@ -2,6 +2,7 @@
 
 import Glue from 'glue';
 import Hoek from 'hoek';
+import ip from 'ip';
 import Manifest from './config/glueManifest';
 
 Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
@@ -10,6 +11,7 @@ Glue.compose(Manifest, { relativeTo: __dirname }, (err, server) => {
 
   server.start((startErr) => {
     Hoek.assert(!startErr, startErr);
-    console.log(`Server started: http://${server.info.address}:${server.info.port}`); // eslint-disable-line
+    console.log('\x1b[36m%s\x1b[0m', `Server started locally: http://localhost:${server.info.port}`); // eslint-disable-line
+    console.log('\x1b[36m%s\x1b[0m', `Server available externally: http://${ip.address()}:${server.info.port}`); // eslint-disable-line
   });
 });

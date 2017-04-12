@@ -98,7 +98,7 @@ const makeWebpackConfig = (isDevelopment) => {
     postcss: () => {
       return [
         stylelint,
-        reporter({ clearMessages: true }),
+        reporter({ clearAllMessages: true }),
         autoprefixer({
           browsers: browserSupport
         })

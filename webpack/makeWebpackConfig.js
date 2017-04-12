@@ -60,7 +60,14 @@ const makeWebpackConfig = (isDevelopment) => {
     },
     assets: {
       noInfo: true,
-      publicPath: '/static/'
+      publicPath: '/static/',
+      stats: {
+        assets: false,
+        colors: true,
+        chunks: false,
+        hash: false,
+        version: false
+      }
     },
     plugins,
     resolve: {

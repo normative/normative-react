@@ -9,6 +9,7 @@ webpack(webpackConfig, (fatalError, stats) => {
 
   if (buildError) {
     console.error(buildError); // eslint-disable-line
+    process.exit(1);
   }
 
   fs.ensureDirSync('./tmp');

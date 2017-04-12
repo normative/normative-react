@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 
 import './Header.scss';
 import normativeLogo from '../../assets/images/normative.svg';
